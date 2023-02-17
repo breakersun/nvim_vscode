@@ -25,18 +25,19 @@ nnoremap gk <Cmd>call VSCodeNotify('cursorMove', { 'to': 'up', 'by': 'wrappedLin
 nnoremap gj <Cmd>call VSCodeNotify('cursorMove', { 'to': 'down', 'by': 'wrappedLine', 'value': v:count1 })<CR>
 " ------------------------
 " Find in files for word under cursor in vscode
-" ------------------------
+" ------------------------ 
+nnoremap <leader>w <Cmd>call VSCodeNotify('workbench.action.files.save')<CR>
 nnoremap <leader>f <Cmd>call VSCodeNotify('workbench.action.quickOpen')<CR>
 nnoremap <leader>sg <Cmd>call VSCodeNotify("workbench.action.findInFiles")<CR>
 nnoremap <leader>ss <Cmd>call VSCodeNotify('workbench.action.findInFiles', { 'query': expand('<cword>')})<CR>
-nnoremap s;    <Cmd>call VSCodeNotify("editor.action.startFindReplaceAction")<Cr>
-nnoremap s/    <Cmd>call VSCodeNotify("actions.find")<Cr>
+nnoremap <leader>s;    <Cmd>call VSCodeNotify("editor.action.startFindReplaceAction")<Cr>
+nnoremap <leader>s/    <Cmd>call VSCodeNotify("actions.find")<Cr>
 " quickfix
 nnoremap <C-.> <Cmd>call VSCodeNotify("keyboard-quickfix.openQuickFix")<CR>
 nnoremap <C-a> <Cmd>call VSCodeNotify("editor.action.selectAll")<Cr>
 xnoremap <C-x> <Cmd>call VSCodeNotifyVisual("editor.action.clipboardCutAction", 1)<Cr>
 " enhanced
-nnoremap <leader>w <Cmd>call VSCodeNotify("workbench.action.openView")<Cr>
+" nnoremap <leader>w <Cmd>call VSCodeNotify("workbench.action.openView")<Cr>
 nnoremap <leader>m <Cmd>call VSCodeNotify("workbench.action.openRecent")<Cr>
 " debug
 nnoremap <leader>d <Cmd>call VSCodeNotify("workbench.view.debug")<Cr>
