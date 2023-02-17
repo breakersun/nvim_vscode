@@ -1,13 +1,9 @@
-" ------------------------
-" hl * # S
-" ------------------------
-nmap *  *``
-nmap #  #``
-nmap g* g*``
-nmap g# g#``
+set clipboard=unnamed
+let mapleader = ' ' 
 " ------------------------
 " vscode speicially mapping
 " ------------------------
+
 function! VSCodeNotifyVisual(cmd, leaveSelection, ...)
     let mode = mode()
     if mode ==# 'V'
@@ -45,7 +41,7 @@ nnoremap gj <Cmd>call VSCodeNotify('cursorMove', { 'to': 'down', 'by': 'wrappedL
 " ------------------------
 " Find in files for word under cursor in vscode
 " ------------------------
-nnoremap s<Cr> <Cmd>call VSCodeNotify("workbench.action.findInFiles", {'query': expand('<cword>')})<CR>
+nnoremap <leader>f <Cmd>call VSCodeNotify("workbench.action.findInFiles", {'query': expand('<cword>')})<CR>
 nnoremap s;    <Cmd>call VSCodeNotify("editor.action.startFindReplaceAction")<Cr>
 nnoremap s/    <Cmd>call VSCodeNotify("actions.find")<Cr>
 " quickfix
@@ -72,7 +68,7 @@ nnoremap <leader>; <Cmd>call VSCodeNotify("workbench.action.debug.gotoNextBreakp
 nnoremap <leader>, <Cmd>call VSCodeNotify("workbench.action.debug.gotoPreviousBreakpoint")<Cr>
 nnoremap <leader>b <Cmd>call VSCodeNotify("editor.debug.action.toggleBreakpoint")<Cr>
 nnoremap <leader>c <Cmd>call VSCodeNotify("editor.debug.action.conditionalBreakpoint")<Cr>
-nnoremap <leader>f <Cmd>call VSCodeNotify("workbench.debug.viewlet.action.addFunctionBreakpointAction")<Cr>
+" nnoremap <leader>f <Cmd>call VSCodeNotify("workbench.debug.viewlet.action.addFunctionBreakpointAction")<Cr>
 nnoremap <leader>E <Cmd>call VSCodeNotify("workbench.debug.viewlet.action.enableAllBreakpoints")<Cr>
 nnoremap <leader>D <Cmd>call VSCodeNotify("workbench.debug.viewlet.action.disableAllBreakpoints")<Cr>
 nnoremap <leader>B <Cmd>call VSCodeNotify("workbench.debug.viewlet.action.removeAllBreakpoints")<Cr>
@@ -125,7 +121,7 @@ AlterCommand sp[lit] Split
 AlterCommand vs[plit] Vsplit
 AlterCommand new New
 AlterCommand vne[w] Vnew
-AlterCommand on[ly] Only
+AlterCommand on[ly] Only 
 
 " buffer management
 nnoremap <C-w>n <Cmd>call <SID>splitNew('h', '__vscode_new__')<CR>
