@@ -27,7 +27,7 @@ nnoremap gj <Cmd>call VSCodeNotify('cursorMove', { 'to': 'down', 'by': 'wrappedL
 " Find in files for word under cursor in vscode
 " ------------------------
 nnoremap <leader>f <Cmd>call VSCodeNotify('workbench.action.quickOpen')<CR>
-nnoremap <leader>sg <Cmd>call VSCodeNotify("workbench.action.findInFiles", {'query': expand('<cword>')})<CR>
+nnoremap <leader>sg <Cmd>call VSCodeNotify("workbench.action.findInFiles")<CR>
 nnoremap <leader>ss <Cmd>call VSCodeNotify('workbench.action.findInFiles', { 'query': expand('<cword>')})<CR>
 nnoremap s;    <Cmd>call VSCodeNotify("editor.action.startFindReplaceAction")<Cr>
 nnoremap s/    <Cmd>call VSCodeNotify("actions.find")<Cr>
