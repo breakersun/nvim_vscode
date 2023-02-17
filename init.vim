@@ -1,25 +1,10 @@
 set clipboard=unnamed
+set ignorecase
 let mapleader = ' ' 
 " ------------------------
 " vscode speicially mapping
 " ------------------------
 
-function! VSCodeNotifyVisual(cmd, leaveSelection, ...)
-    let mode = mode()
-    if mode ==# 'V'
-        let startLine = line('v')
-        let endLine = line('.')
-        call VSCodeNotifyRange(a:cmd, startLine, endLine, a:leaveSelection, a:000)
-    elseif mode ==# 'v' || mode ==# "\<C-v>"
-        let startPos = getpos('v')
-        let endPos = getpos('.')
-        call VSCodeNotifyRangePos(a:cmd, startPos[1], endPos[1], startPos[2], endPos[2] + 1, a:leaveSelection, a:000)
-    else
-        call VSCodeNotify(a:cmd, a:000)
-    endif
-endfunction
-xnoremap <C-S-P> <Cmd>call VSCodeNotifyVisual("workbench.action.showCommands", 1)<CR>
-nnoremap \| <Cmd>call VSCodeNotify('workbench.action.findInFiles', { 'query': expand('<cword>')})<CR>
 nnoremap <C-o> <Cmd>call VSCodeNotify("workbench.action.navigateBack")<CR>
 nnoremap <C-i> <Cmd>call VSCodeNotify("workbench.action.navigateForward")<CR>
 " ------------------------
@@ -41,7 +26,8 @@ nnoremap gj <Cmd>call VSCodeNotify('cursorMove', { 'to': 'down', 'by': 'wrappedL
 " ------------------------
 " Find in files for word under cursor in vscode
 " ------------------------
-nnoremap <leader>f <Cmd>call VSCodeNotify("workbench.action.findInFiles", {'query': expand('<cword>')})<CR>
+nnoremap <leader>sg <Cmd>call VSCodeNotify("workbench.action.findInFiles", {'query': expand('<cword>')})<CR>
+nnoremap <leader>ss <Cmd>call VSCodeNotify('workbench.action.findInFiles', { 'query': expand('<cword>')})<CR>
 nnoremap s;    <Cmd>call VSCodeNotify("editor.action.startFindReplaceAction")<Cr>
 nnoremap s/    <Cmd>call VSCodeNotify("actions.find")<Cr>
 " quickfix
