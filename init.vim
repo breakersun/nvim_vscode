@@ -41,26 +41,26 @@ xnoremap <C-x> <Cmd>call VSCodeNotifyVisual("editor.action.clipboardCutAction", 
 " nnoremap <leader>w <Cmd>call VSCodeNotify("workbench.action.openView")<Cr>
 nnoremap <leader>b <Cmd>call VSCodeNotify("workbench.action.openRecent")<Cr>
 " debug
-nnoremap <leader>d <Cmd>call VSCodeNotify("workbench.view.debug")<Cr>
-nnoremap <leader>t <Cmd>call VSCodeNotify("workbench.action.debug.start")<Cr>
-nnoremap <leader>R <Cmd>call VSCodeNotify("workbench.action.debug.restart")<Cr>
-nnoremap <leader>n <Cmd>call VSCodeNotify("workbench.action.debug.continue")<Cr>
-nnoremap <leader>i <Cmd>call VSCodeNotify("workbench.action.debug.stepIntoTarget")<Cr>
-nnoremap <leader>s <Cmd>call VSCodeNotify("workbench.action.debug.stepInto")<Cr>
-nnoremap <leader>o <Cmd>call VSCodeNotify("workbench.action.debug.stepOver")<Cr>
-nnoremap <leader>u <Cmd>call VSCodeNotify("workbench.action.debug.stepOut")<Cr>
-nnoremap <leader>q <Cmd>call VSCodeNotify("workbench.action.debug.stop")<Cr>
-nnoremap <leader>p <Cmd>call VSCodeNotify("workbench.action.debug.pause")<Cr>
-nnoremap <leader>C <Cmd>call VSCodeNotify("workbench.action.debug.configure")<Cr>
+nnoremap <leader>dd <Cmd>call VSCodeNotify("workbench.view.debug")<Cr>
+nnoremap <leader>dt <Cmd>call VSCodeNotify("workbench.action.debug.start")<Cr>
+nnoremap <leader>dR <Cmd>call VSCodeNotify("workbench.action.debug.restart")<Cr>
+nnoremap <leader>dn <Cmd>call VSCodeNotify("workbench.action.debug.continue")<Cr>
+nnoremap <leader>di <Cmd>call VSCodeNotify("workbench.action.debug.stepIntoTarget")<Cr>
+nnoremap <leader>ds <Cmd>call VSCodeNotify("workbench.action.debug.stepInto")<Cr>
+nnoremap <leader>do <Cmd>call VSCodeNotify("workbench.action.debug.stepOver")<Cr>
+nnoremap <leader>du <Cmd>call VSCodeNotify("workbench.action.debug.stepOut")<Cr>
+nnoremap <leader>dq <Cmd>call VSCodeNotify("workbench.action.debug.stop")<Cr>
+nnoremap <leader>dp <Cmd>call VSCodeNotify("workbench.action.debug.pause")<Cr>
+nnoremap <leader>dC <Cmd>call VSCodeNotify("workbench.action.debug.configure")<Cr>
 " breakpoint
-nnoremap <leader>; <Cmd>call VSCodeNotify("workbench.action.debug.gotoNextBreakpoint")<Cr>
-nnoremap <leader>, <Cmd>call VSCodeNotify("workbench.action.debug.gotoPreviousBreakpoint")<Cr>
+nnoremap <leader>d; <Cmd>call VSCodeNotify("workbench.action.debug.gotoNextBreakpoint")<Cr>
+nnoremap <leader>d, <Cmd>call VSCodeNotify("workbench.action.debug.gotoPreviousBreakpoint")<Cr>
 nnoremap <leader>db <Cmd>call VSCodeNotify("editor.debug.action.toggleBreakpoint")<Cr>
-nnoremap <leader>c <Cmd>call VSCodeNotify("editor.debug.action.conditionalBreakpoint")<Cr>
-" nnoremap <leader>f <Cmd>call VSCodeNotify("workbench.debug.viewlet.action.addFunctionBreakpointAction")<Cr>
-nnoremap <leader>E <Cmd>call VSCodeNotify("workbench.debug.viewlet.action.enableAllBreakpoints")<Cr>
-nnoremap <leader>D <Cmd>call VSCodeNotify("workbench.debug.viewlet.action.disableAllBreakpoints")<Cr>
-nnoremap <leader>B <Cmd>call VSCodeNotify("workbench.debug.viewlet.action.removeAllBreakpoints")<Cr>
+nnoremap <leader>dc <Cmd>call VSCodeNotify("editor.debug.action.conditionalBreakpoint")<Cr>
+nnoremap <leader>df <Cmd>call VSCodeNotify("workbench.debug.viewlet.action.addFunctionBreakpointAction")<Cr>
+nnoremap <leader>dE <Cmd>call VSCodeNotify("workbench.debug.viewlet.action.enableAllBreakpoints")<Cr>
+nnoremap <leader>dD <Cmd>call VSCodeNotify("workbench.debug.viewlet.action.disableAllBreakpoints")<Cr>
+nnoremap <leader>dB <Cmd>call VSCodeNotify("workbench.debug.viewlet.action.removeAllBreakpoints")<Cr>
 " ------------------------
 " autocmd
 " ------------------------
