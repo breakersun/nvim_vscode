@@ -117,11 +117,8 @@ nnoremap <C-w>n <Cmd>call <SID>splitNew('h', '__vscode_new__')<CR>
 xnoremap <C-w>n <Cmd>call <SID>splitNew('h', '__vscode_new__')<CR>
 
 nnoremap <C-w>q <Cmd>call VSCodeNotify('workbench.action.closeActiveEditor')<CR>
-xnoremap <C-w>q <Cmd>call VSCodeNotify('workbench.action.closeActiveEditor')<CR>
-nnoremap <C-w>c <Cmd>call VSCodeNotify('workbench.action.closeActiveEditor')<CR>
-xnoremap <C-w>c <Cmd>call VSCodeNotify('workbench.action.closeActiveEditor')<CR>
+nnoremap <leader>c <Cmd>call VSCodeNotify('workbench.action.closeActiveEditor')<CR>
 nnoremap <C-w><C-c> <Cmd>call VSCodeNotify('workbench.action.closeActiveEditor')<CR>
-xnoremap <C-w><C-c> <Cmd>call VSCodeNotify('workbench.action.closeActiveEditor')<CR>
 
 " window/splits management
 nnoremap <C-w>s <Cmd>call <SID>split('h')<CR>
